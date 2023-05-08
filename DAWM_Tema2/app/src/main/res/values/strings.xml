@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DAWM_Tema2</string>
+    <string name="animal_name_input">Animal_Name</string>
+    <string name="continent_input">Continent_Input</string>
+    <string name="submit_button">Submit</string>
+    <string name="animals">Animals</string>
+    <string name="delete_button">Delete</string>
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".MainActivityJava">
+
+    <EditText
+        android:id="@+id/animal_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edit_text_rounded"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:hint="Name of an Animal..."
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="20dp"
+        />
+
+    <EditText
+        android:id="@+id/continent_input"
+        android:layout_below="@+id/animal_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_rounded"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:hint="Continent.."
+        android:minHeight="48dp"
+        android:padding="20dp"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/animal_name_input"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/submit_button"
+        android:layout_width="259dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/continent_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="160dp"
+        android:background="@drawable/button_behaviours"
+        android:gravity="center"
+        android:minHeight="20dp"
+        android:text="Submit"
+        android:textColor="@drawable/text_behaviours"
+        android:textSize="15dp"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/animals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit_button"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/green"
+        tools:layout_editor_absoluteX="4dp"
+        tools:listitem="@layout/animals_and_continents" />
+</RelativeLayout>
