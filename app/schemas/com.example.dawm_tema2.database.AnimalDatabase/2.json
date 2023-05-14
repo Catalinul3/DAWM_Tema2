@@ -1,0 +1,46 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "74998425187f7b582e1eb70d6828e8fd",
+    "entities": [
+      {
+        "tableName": "animale",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`animalID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `animal_name` TEXT, `continent_name` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "animalID",
+            "columnName": "animalID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "animalName",
+            "columnName": "animal_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "continentName",
+            "columnName": "continent_name",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "animalID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '74998425187f7b582e1eb70d6828e8fd')"
+    ]
+  }
+}
